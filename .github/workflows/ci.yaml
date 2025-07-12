@@ -34,6 +34,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: '1.22.5'
+          cache: true
+      
       - name: Golang Vulncheck
         uses: Templum/govulncheck-action@v1.0.2
 
