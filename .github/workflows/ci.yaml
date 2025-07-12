@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: self hosted
+    runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,7 +29,7 @@ jobs:
         run: go test -v ./...
 
   code-quality:
-    runs-on: self hosted
+    runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -40,7 +40,7 @@ jobs:
           version: v1.56.2
 
   push-image:
-    runs-on: self hosted
+    runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -66,7 +66,7 @@ jobs:
           platforms: linux/amd64
 
   update-chart:
-    runs-on: self hosted
+    runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
