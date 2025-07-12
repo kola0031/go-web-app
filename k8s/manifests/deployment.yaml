@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: go-web-app
-        image: kola0031/go-web-app:latest
+        image: kola0031/go-web-app:v1 
         ports:
         - containerPort: 8080
