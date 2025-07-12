@@ -30,6 +30,7 @@ jobs:
 
   code-quality:
     runs-on: self-hosted
+    needs: build
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -48,6 +49,7 @@ jobs:
 
   push-image:
     runs-on: self-hosted
+    needs: code-quality
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -74,6 +76,7 @@ jobs:
 
   update-chart:
     runs-on: self-hosted
+    needs: push-image
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
